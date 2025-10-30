@@ -9,3 +9,4 @@ pooch==1.8.2
 tqdm==4.67.1
 pyarrow==16.1.0
 torch>=2.2.0
+scikit-misc==0.1.4
