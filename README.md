@@ -26,8 +26,14 @@ Fine-tuning single-cell foundation transformers (Geneformer or scGPT) to separat
   - `gse144735_gene_rank_tokens.npz` (tokens and lengths)
   - `gse144735_tokens_metadata.tsv` (Patient/Class/Sample and token lengths)
 
+## Splits
+
+- Use `notebooks/03_splits.ipynb` to create donor-wise train/val/test indices (4/1/1 over six donors) from the token metadata.
+- Outputs under `gse144735/processed/tokens/`:
+  - `splits_by_patient.npz` (arrays: `train_idx`, `val_idx`, `test_idx`; lists of patients)
+  - `splits_summary.tsv` (counts by split/patient/class for sanity checks)
+
 ## Next steps
 
 - Define donor-level train/validation/test splits (patient-wise) using the token metadata.
 - Train the transformer head and capture metrics, visualisations, and biological readouts.
-
